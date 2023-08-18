@@ -1,0 +1,22 @@
+@import '../../../scss/defaultVariables.scss';
+
+.navigation {
+  width: 1152px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    margin-right: 24px;
+    a {
+      color: $primary-text;
+      text-decoration: none;
+    }
+  }
+}

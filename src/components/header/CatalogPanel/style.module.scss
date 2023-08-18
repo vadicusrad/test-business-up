@@ -1,0 +1,28 @@
+@import '../../../scss/defaultVariables.scss';
+
+.catalog {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  width: 384px;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #222427;
+    font-weight: 500;
+  }
+
+  &__text {
+    color: $gray-text;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 44px;
+  }
+}

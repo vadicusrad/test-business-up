@@ -1,0 +1,13 @@
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  width: 576px;
+
+  &__text {
+    color: #5e6062;
+    padding-left: 12px;
+    font-style: normal;
+  }
+}

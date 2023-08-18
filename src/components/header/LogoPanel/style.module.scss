@@ -1,0 +1,18 @@
+@import '../../../scss/defaultVariables.scss';
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 384px;
+  padding: 0 24px 0 50px;
+
+  &__img {
+    width: 119px;
+    height: 48px;
+  }
+  &__text {
+    margin-left: 29px;
+    color: $gray-text;
+    font-size: 13px;
+  }
+}
