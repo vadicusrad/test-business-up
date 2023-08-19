@@ -7,35 +7,28 @@ import ContactsPanel from './ContactsPanel';
 import LogoPanel from './LogoPanel';
 import CatalogPanel from './CatalogPanel';
 import ButtonsPanel from './ButtonsPanel';
-const Header = () => {
+import Cart from '../Cart';
+const Header = ({ cartItems, visibleCart, setVisibleCart, changeCartItemCount }) => {
   return (
     <div className={style.header}>
       <div className={style.header__wrapper_top}>
-        {/* <div className={style.header__item}> */}
         <LogoPanel />
-        {/* </div> */}
-        {/* <div className={style.header__item}> */}
         <SearchPanel />
-        {/* </div> */}
-        {/* <div className={style.header__item}> */}
         <AddressPanel />
-        {/* </div> */}
-        {/* <div className={style.header__item}> */}
         <ContactsPanel />
-        {/* </div> */}
       </div>
       <div className={style.header__divider} />
       <div className={style.header__wrapper_bottom}>
-        {/* <div className={style.header__item}> */}
         <CatalogPanel />
-        {/* </div> */}
-        {/* <div className={style.header__item}> */}
         <NavigationPanel />
-        {/* </div> */}
-        {/* <div className={style.header__item}> */}
-        <ButtonsPanel />
-        {/* </div> */}
+        <ButtonsPanel
+          setVisibleCart={setVisibleCart}
+          visibleCart={visibleCart}
+          cartItemsLength={cartItems.length}
+        />
       </div>
+      <div className={style.header__divider} />
+      {visibleCart && <Cart cartItems={cartItems}  changeCartItemCount={changeCartItemCount}/>}
     </div>
   );
 };

@@ -1,0 +1,11 @@
+.app {
+  height: 100vh;
+  background-color: beige;
+
+  &__main {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+}

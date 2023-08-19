@@ -14,13 +14,20 @@
     background: none;
     border: none;
     cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $system-neutral;
+    }
   }
 
   &__counter {
     position: absolute;
     top: -9px;
     right: -3;
-    padding: 0 4px;
+    padding: 1px 4px;
     height: 16px;
     background-color: $system-paleGreen;
     border-radius: 4px;
