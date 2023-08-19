@@ -10,31 +10,31 @@ import ButtonsPanel from './ButtonsPanel';
 const Header = () => {
   return (
     <div className={style.header}>
-      <div className={style.header__wrapper}>
-        <div className={style.header__item}>
-          <LogoPanel />
-        </div>
-        <div className={style.header__item}>
-          <SearchPanel />
-        </div>
-        <div className={style.header__item}>
-          <AddressPanel />
-        </div>
-        <div className={style.header__item}>
-          <ContactsPanel />
-        </div>
+      <div className={style.header__wrapper_top}>
+        {/* <div className={style.header__item}> */}
+        <LogoPanel />
+        {/* </div> */}
+        {/* <div className={style.header__item}> */}
+        <SearchPanel />
+        {/* </div> */}
+        {/* <div className={style.header__item}> */}
+        <AddressPanel />
+        {/* </div> */}
+        {/* <div className={style.header__item}> */}
+        <ContactsPanel />
+        {/* </div> */}
       </div>
       <div className={style.header__divider} />
-      <div className={style.header__wrapper}>
-        <div className={style.header__item}>
-          <CatalogPanel />
-        </div>
-        <div className={style.header__item}>
-          <NavigationPanel />
-        </div>
-        <div className={style.header__item}>
-          <ButtonsPanel />
-        </div>
+      <div className={style.header__wrapper_bottom}>
+        {/* <div className={style.header__item}> */}
+        <CatalogPanel />
+        {/* </div> */}
+        {/* <div className={style.header__item}> */}
+        <NavigationPanel />
+        {/* </div> */}
+        {/* <div className={style.header__item}> */}
+        <ButtonsPanel />
+        {/* </div> */}
       </div>
     </div>
   );

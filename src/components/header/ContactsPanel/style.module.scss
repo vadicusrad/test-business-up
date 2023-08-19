@@ -3,14 +3,25 @@
 .contacts {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 384px;
   padding: 0 25px;
 
+  @media screen and (max-width: 1143px) {
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 764px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 0 20px;
+  }
   &__wrapper {
     display: flex;
     align-items: center;
     gap: 4px;
+    @media screen and (max-width: 400px) {
+      padding: 0;
+    }
   }
 
   &__socialLink {
@@ -33,5 +44,9 @@
     background: none;
     border: none;
     cursor: pointer;
+
+    @media screen and (max-width: 764px) {
+      display: none;
+    }
   }
 }

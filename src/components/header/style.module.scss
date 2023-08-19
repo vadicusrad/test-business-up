@@ -1,15 +1,38 @@
 @import '../../scss/defaultVariables.scss';
 
 .header {
-  width: 1920px;
-  height: 160px;
+  max-width: 1920px;
+  width: 100%;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin: 0 auto;
 
-  &__wrapper {
-    display: flex;
+  &__wrapper_top {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 384px 1fr 1fr 384px;
     height: 80px;
+
+    @media screen and (max-width: 1576px) {
+      grid-template-columns: 384px 1fr 384px;
+    }
+    @media screen and (max-width: 1143px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 496px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__wrapper_bottom {
+    display: grid;
+    grid-template-columns: 384px 1fr 384px;
+    height: 80px;
+    @media screen and (max-width: 1445px) {
+      display: none;
+    }
   }
 
   &__item {

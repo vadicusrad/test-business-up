@@ -3,7 +3,11 @@
   align-items: center;
   justify-content: center;
   padding: 0 28px;
-  width: 576px;
+  border-right: 1px solid #e4e4e7;
+
+  @media screen and (max-width: 1143px) {
+    display: none;
+  }
 
   &__text {
     color: #5e6062;

@@ -5,7 +5,9 @@
   align-items: center;
   justify-content: center;
   gap: 46px;
-  width: 384px;
+  @media screen and (max-width: 1445px) {
+    display: none;
+  }
 
   &__btn {
     position: relative;

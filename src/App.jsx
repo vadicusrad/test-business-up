@@ -1,9 +1,9 @@
-import './App.scss';
+import style from './app.module.scss';
 import Header from './components/header';
 
 function App() {
   return (
-    <div className='App'>
+    <div>
       <Header />
     </div>
   );

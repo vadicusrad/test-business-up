@@ -1,19 +1,28 @@
 @import '../../../scss/defaultVariables.scss';
 
 .navigation {
-  width: 1152px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e4e4e7;
   &__list {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
     list-style: none;
+
+    @media screen and (max-width: 1576px) {
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 1445px) {
+      display: none;
+    }
   }
 
   &__item {
     text-transform: uppercase;
-    margin-right: 24px;
     a {
       color: $primary-text;
       text-decoration: none;
