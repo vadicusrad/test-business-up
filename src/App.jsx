@@ -3,10 +3,12 @@ import Header from './components/Header';
 import { doors } from './data/doors';
 import style from './app.module.scss';
 import ProductCard from './components/ProductCard';
+import ModalWindow from './components/ModalWindow';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
   const [visibleCart, setVisibleCart] = useState(false);
+  const [visibleModal, setVisibleModal] = useState(false);
 
   const addItemToCart = (id) => {
     if (cartItems.find((item) => item.id === id)) {
@@ -49,12 +51,26 @@ function App() {
         visibleCart={visibleCart}
         setVisibleCart={setVisibleCart}
         changeCartItemCount={changeCartItemCount}
+        setVisibleModal={setVisibleModal}
+        visibleModal={visibleModal}
       />
       <main className={style.app__main}>
-        временные карты для демонстрации логики
-        {doors.map((item) => (
-          <ProductCard key={item.id} {...item} addItemToCart={addItemToCart} />
-        ))}
+        {visibleModal && (
+          <ModalWindow
+            visibleModal={visibleModal}
+            setVisibleModal={setVisibleModal}
+          />
+        )}
+        <h3>Временные карточки для демонстрации логики корзины</h3>
+        <div className={style.app__exampleList}>
+          {doors.map((item) => (
+            <ProductCard
+              key={item.id}
+              {...item}
+              addItemToCart={addItemToCart}
+            />
+          ))}
+        </div>
       </main>
     </div>
   );

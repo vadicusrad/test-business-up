@@ -3,7 +3,7 @@ import style from './style.module.scss';
 import telegramIcon from '../../../assets/icons/telegram-icon.svg';
 import whatsUpIcon from '../../../assets/icons/whats-up-icon.svg';
 
-const ContactsPanel = () => {
+const ContactsPanel = ({ setVisibleModal, visibleModal }) => {
   return (
     <div className={style.contacts}>
       <div className={style.contacts__wrapper}>
@@ -17,7 +17,12 @@ const ContactsPanel = () => {
       <a className={style.contacts__tel} href='tel:8 (831) 219-97-81'>
         8 (831) 219-97-81
       </a>
-      <button className={style.contacts__callMeButton}>Заказать звонок</button>
+      <button
+        onClick={() => setVisibleModal(!visibleModal)}
+        className={style.contacts__callMeButton}
+      >
+        Заказать звонок
+      </button>
     </div>
   );
 };

@@ -8,14 +8,24 @@ import LogoPanel from './LogoPanel';
 import CatalogPanel from './CatalogPanel';
 import ButtonsPanel from './ButtonsPanel';
 import Cart from '../Cart';
-const Header = ({ cartItems, visibleCart, setVisibleCart, changeCartItemCount }) => {
+const Header = ({
+  cartItems,
+  visibleCart,
+  setVisibleCart,
+  visibleModal,
+  setVisibleModal,
+  changeCartItemCount,
+}) => {
   return (
     <div className={style.header}>
       <div className={style.header__wrapper_top}>
         <LogoPanel />
         <SearchPanel />
         <AddressPanel />
-        <ContactsPanel />
+        <ContactsPanel
+          setVisibleModal={setVisibleModal}
+          visibleModal={visibleModal}
+        />
       </div>
       <div className={style.header__divider} />
       <div className={style.header__wrapper_bottom}>
@@ -28,7 +38,9 @@ const Header = ({ cartItems, visibleCart, setVisibleCart, changeCartItemCount })
         />
       </div>
       <div className={style.header__divider} />
-      {visibleCart && <Cart cartItems={cartItems}  changeCartItemCount={changeCartItemCount}/>}
+      {visibleCart && (
+        <Cart cartItems={cartItems} changeCartItemCount={changeCartItemCount} />
+      )}
     </div>
   );
 };
