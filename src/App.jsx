@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import { doors } from './data/doors';
 import style from './app.module.scss';
